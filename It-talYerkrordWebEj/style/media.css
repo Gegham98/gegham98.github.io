@@ -197,5 +197,10 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+	.sct4 li span{
+		height: 15px!important;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 
 }
