@@ -23,11 +23,14 @@ $(document).ready(function() {
 		let fix = document.getElementsByTagName('header')[0];
 		let navhover = document.querySelector('nav ul a');
 		let imgdiv = document.querySelector('.img');
+		let body = document.getElementById('body');
 		if (window.scrollY > 160) {
 			nav.className = 'navfix';
+			body.setAttribute('class', 'body');
 			// fix.style = `margin-top:325px`;
 		} else{
 			nav.className = '';
+			body.removeAttribute('class', 'body');
 			// fix.style = `margin-top:0`;
 		}
 	}
