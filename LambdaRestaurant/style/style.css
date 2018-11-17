@@ -1,4 +1,5 @@
 /*DEFAULT**********************************************/
+header,.sct1,.sct2,.sct4{background-attachment: fixed!important;background-size: 100% 100%!important}
 html *{
 	-moz-user-select: -moz-none!important;
 	-o-user-select: none!important;
@@ -15,9 +16,7 @@ a, li{
 	padding: 0;
 	margin: 0;
 }
-.body{
-	padding-top: 140px!important;
-}
+
 .container-fluid{
 	padding-right: 0;
 	padding-left: 0;
@@ -33,7 +32,7 @@ p,span{
 /*HEADER **********************************************************/
 
 header {
-	background: url(../img/content1.png);
+	background-image: url(../img/content1.png);
 	background-size: 100%;
 	position: relative;
 	z-index: 1;
@@ -53,30 +52,33 @@ header *{
 
 nav>img{
 	display: inline-block;
-	width: 180px;
-	margin-top: 20px;
+	height: 77%;
+	margin-top: 10px;
 	margin-left: 130px;
 	position: relative;
 	cursor: pointer;
 }
 nav{
-	height: 140px;
-	margin-top: -10px;
-	position: relative;
+	position: absolute;
+	height: 100px;
 	width: 100%;
 }
 .navfix{
 	position: fixed;
 	top: 0;
-	background: linear-gradient(rgb(150,120,150), rgb(5,102,105));
+	background: linear-gradient(rgb(59,90,75), rgb(61,76,84));
 	box-shadow: 0 2px 10px black;
+	animation: nav 0.35s;
+}
+.navOut{
+	animation-direction: alternate;
 }
 nav ul{
-	position: relative;
+	position: absolute;
 	z-index: 1;
-	top: -75px;
-	left: 400px;
-	width: 55%;
+	top: 0;
+	left: 310px;
+	width: 70%;
 }
 
 nav ul a{
@@ -88,23 +90,59 @@ nav ul a{
 	font-weight: bolder;
 	text-align: center;
 	margin-left: -4px;
-	border-bottom: 12px double transparent;
-	padding: 10px 15px 20px;
+	border-bottom: 8px solid transparent;
+	padding: 35px 15px 20px;
 	letter-spacing: 4px;
 	color:rgba(255,255,255,0.93);
 }
-nav ul a:hover{
-	padding: 20px 15px 13px;
-	color: lightgray;
-	border-bottom: 12px double lightgray;
+nav li:last-child a{
+	margin-left: 150px;
+	border-radius: 10px;
+	border: none;
+	letter-spacing: 1px;
+	color: rgba(0,0,0,0.8);
+	font-weight: normal;
+	background: rgb(204,248,228);
+	padding: 10px 18px;
+	font-family: 'Baloo Thambi', cursive;
+	font-size: 24px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	padding-left: 60px;
+	margin-left: 108px;
+}
+nav li:last-child{
+	position: relative;
+}
+nav li:last-child a::before{
+	content: '';
+	color: white;
+	position: absolute;
+	top: 12px;
+	right: 203px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background: url(../img/reservation.png);
+	background-size: contain;
+}
+nav li:last-child a:hover{
+	box-shadow: 0	0	10px 3px rgba(255,255,255,0.5);
+}
+nav ul a:hover:not([class='reserv']){
+	padding: 35px 15px 13px;
+	color: #fff;
+	background: rgba(255,255,255,0.1);
+	border-bottom: 3px solid lightgray;
 	margin: -18px 0;
 	margin-left: -4px;
 }
 .soc-icon{
 	display: inline-block!important;
 	position: absolute;
-	right: 150px;
-	top: 70px;
+	right: 60px;
+	top: 40px;
 	cursor: default;
 }
 .soc-icon a{
@@ -138,6 +176,7 @@ nav ul a:hover{
 	width: 65%;
 	text-align: center!important;
 	margin: 0 auto!important;
+	padding-top: 200px;
 }
 .header p span{
 	animation-timing-function: default;
@@ -271,7 +310,7 @@ span.two:hover{margin:0 13px;margin-top: -7px;}
 	padding: 100px 170px;
 	margin: 0;
 	text-align: right;
-	background: url(../img/sec2bg.png);
+	background-image: url(../img/sec2bg.png);
 	background-size: 100%;
 }
 .sct22{
@@ -474,7 +513,7 @@ span.two:hover{margin:0 13px;margin-top: -7px;}
 	box-shadow: 0 0 25px 3px gray;
 }
 .delay-03s{
-	animation-delay: 0.1s;
+	animation-delay: 0.2s;
 }
 /*right********************************************/
 .sct5 .right{

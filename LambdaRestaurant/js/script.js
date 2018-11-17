@@ -3,11 +3,7 @@ $(document).ready(function() {
 	at.className += 'namealert';
 	document.getElementById('mail').onfocusout = function(event) {
 		this.parentElement.appendChild(at);
-		at.innerHTML = 'Please fill all required field';
-		if (this.value == '') {
-			at.style.display = 'inline-block';
-		}
-		else if (this.value.indexOf('@') == -1){
+		if (this.value.indexOf('@') == -1 && this.value != ''){
 			at.style.display = 'inline-block';
 			at.innerHTML = 'Please enter a valid email address';
 		}
@@ -20,17 +16,18 @@ $(document).ready(function() {
 
 	document.body.onscroll = function (e) {
 		let nav = document.getElementById('nav');
+		let logo = $('nav>img');
 		let fix = document.getElementsByTagName('header')[0];
 		let navhover = document.querySelector('nav ul a');
 		let imgdiv = document.querySelector('.img');
 		let body = document.getElementById('body');
-		if (window.scrollY > 160) {
+		if (window.scrollY > 50) {
+			logo.attr('src', 'img/lambdalogo.png');
 			nav.className = 'navfix';
-			body.setAttribute('class', 'body');
 			// fix.style = `margin-top:325px`;
 		} else{
-			nav.className = '';
-			body.removeAttribute('class', 'body');
+			logo.attr('src', 'img/logotop.png');
+			nav.className = 'navOut';
 			// fix.style = `margin-top:0`;
 		}
 	}
