@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 	// navbar onscroll fixing
 
-	document.body.onscroll = function (e) {
+	document.body.onscroll = window.onload = function (e) {
 		let nav = document.getElementById('nav');
 		let logo = $('nav>img');
 		let fix = document.getElementsByTagName('header')[0];
@@ -24,12 +24,94 @@ $(document).ready(function() {
 		if (window.scrollY > 50) {
 			logo.attr('src', 'img/lambdalogo.png');
 			nav.className = 'navfix';
-			// fix.style = `margin-top:325px`;
 		} else{
 			logo.attr('src', 'img/logotop.png');
 			nav.className = 'navOut';
-			// fix.style = `margin-top:0`;
 		}
 	}
+
+
+	// from nav>li animated directions to sections
+
+	let liHome = $('nav li:first-child');
+	let liAbout = $('nav li:nth-child(2)');
+	let liIngred = $('nav li:nth-child(3)');
+	let liMenu = $('nav li:nth-child(4)');
+	let liReview = $('nav li:nth-child(5)');
+	let liReserv = $('nav li:last-child');
+	
+	$('#nav>img').click(function() {
+		$('html').animate({
+			scrollTop: $('header').offset().top},
+			'slow');
+	});
+
+	liHome.click(function() {
+		$('html').animate({
+			scrollTop: $('header').offset().top},
+			'slow');
+	});
+	
+	liAbout.click(function() {
+		$('html').animate({
+			scrollTop: $('section.sct1').offset().top - 97},
+			'slow');
+	});
+	
+	liIngred.click(function() {
+		$('html').animate({
+			scrollTop: $('section.sct2').offset().top - 97},
+			'slow');
+	});
+	
+	liMenu.click(function() {
+		$('html').animate({
+			scrollTop: $('.sct3 .row1').offset().top - 140},
+			'slow');
+	});
+	
+	liReview.click(function() {
+		$('html').animate({
+			scrollTop: $('section.sct4').offset().top},
+			'slow');
+	});
+	
+	liReserv.click(function() {
+		$('html').animate({
+			scrollTop: $('section.sct5').offset().top - 97},
+			1500);
+	});
+
+	$('.one').click(function() {
+		$('html').animate({
+			scrollTop: $('section.sct5').offset().top - 97},
+			1500);
+	});
+
+	$('.two').click(function() {
+		$('html').animate({
+			scrollTop: $('section.sct3').offset().top - 140},
+			1500);
+	});
+
+	// footer icon sending
+
+	$('.ico1').click(function(event) {
+		window.open('https://www.facebook.com/');
+	});
+
+
+	$('.ico2').click(function(event) {
+		window.open('https://www.youtube.com/watch?v=PU2XJa-7HTg');
+	});
+
+	$('.ico3').click(function(event) {
+		window.open('https://twitter.com');
+	});
+
+	// $('.ico1').click(function(event) {
+	// 	console.log(this);
+	// 	window.open('https://www.facebook.com/');
+	// });
 })
 

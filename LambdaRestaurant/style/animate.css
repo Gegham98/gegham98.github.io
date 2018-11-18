@@ -1429,8 +1429,8 @@
 }
 
 .animated.slow {
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.8s;
+  animation-duration: 1.8s;
 }
 
 .animated.slower {

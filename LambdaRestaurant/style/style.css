@@ -1,7 +1,7 @@
 /*DEFAULT**********************************************/
 header,.sct2,.sct4{
 	background-attachment: fixed;
-	background-size: auto 100% !important;
+	background-size: cover!important;
 }
 html *{
 	-moz-user-select: -moz-none!important;
@@ -18,6 +18,7 @@ a, li{
 	display: inline-block!important;
 	padding: 0;
 	margin: 0;
+	/*color: white;*/
 }
 
 .container-fluid{
@@ -83,6 +84,9 @@ nav ul{
 	left: 310px;
 	width: 70%;
 }
+nav li{
+	color: white;
+}
 
 nav ul a{
 	font-family: 'Slabo 27px', serif;
@@ -103,7 +107,7 @@ nav li:last-child a{
 	border-radius: 10px;
 	border: none;
 	letter-spacing: 1px;
-	color: rgba(0,0,0,0.8);
+	color: rgba(0,0,0,0.8)!important;
 	font-weight: normal;
 	background: rgb(204,248,228);
 	padding: 10px 18px;
