@@ -1,0 +1,81 @@
+@media only screen and (max-width: 1570px){
+	.sct5 .right{
+		width: 47%;
+		padding: 0 50px;
+		min-width: 387px!important;
+	}
+	.sct5 input, .sct5 select{
+		width: 170px;
+	}
+	header p{
+		width: 91%!important;
+	}
+	header .soc-icon{
+		right: 20px;
+	}
+
+}
+@media only screen and (max-width: 1430px){
+	header nav>img{
+		margin-left: 30px;
+	}
+	header nav ul{
+		left: 160px;
+	}
+	.sct5 {
+		padding-left: 50px!important;
+		padding-right: 0px!important;
+	}
+	
+
+}
+
+@media only screen and (max-width: 1255px){
+	.soc-icon{
+		display: none!important;
+	}
+	nav li:last-child a{
+		position:absolute;
+		top: -35px;
+		left: 0;
+	}
+
+
+}
+@media only screen and (max-width: 1170px){
+	#nav{
+		height: 80px!important;
+	}
+	nav>img{
+		margin-top: 5px;
+	}
+	nav ul li a:not([reserve]){
+		padding-top: 25px!important;
+	}
+	header nav li:last-child a{
+		top: -35px!important;
+		padding-top: 10px!important;
+	}
+	.sct5>div{
+		width: 80%!important;
+	}
+	.sct5 input, .sct5 select{
+		width: 300px;
+	}
+	.sct5{
+		padding-left: 0!important;
+		padding-right: 0!important;
+		text-align: center;
+	}
+	.sct5 .left{
+		margin-bottom: 90px;
+	}
+	.sct2{
+		text-align: center!important:;
+	}
+}
+
+@media only screen and (max-width: 991px){}
+@media only screen and (max-width: 768px){}
+@media only screen and (max-width: 560px){}
+@media only screen and (max-width: 480px){}

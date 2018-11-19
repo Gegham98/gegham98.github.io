@@ -3,7 +3,7 @@ $(document).ready(function() {
 	at.className += 'namealert';
 	document.getElementById('mail').onfocusout = function(event) {
 		this.parentElement.appendChild(at);
-		if (this.value.indexOf('@') == -1 && this.value != ''){
+		if (this.value.indexOf('@') == -1){
 			at.style.display = 'inline-block';
 			at.innerHTML = 'Please enter a valid email address';
 		}
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
 	liHome.click(function() {
 		$('html').animate({
-			scrollTop: $('header').offset().top},
+			scrollTop: $('header').offset().top - 97},
 			'slow');
 	});
 	
@@ -72,7 +72,7 @@ $(document).ready(function() {
 	
 	liReview.click(function() {
 		$('html').animate({
-			scrollTop: $('section.sct4').offset().top},
+			scrollTop: $('section.sct4').offset().top - 97},
 			'slow');
 	});
 	
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
 	$('.two').click(function() {
 		$('html').animate({
-			scrollTop: $('section.sct3').offset().top - 140},
+			scrollTop: $('.sct3 .row1').offset().top - 140},
 			1500);
 	});
 
