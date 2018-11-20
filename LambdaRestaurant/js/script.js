@@ -80,7 +80,7 @@ $(document).ready(function() {
 			if (this.value > 250) {
 				span2.innerHTML = 'Sorry but we can not accommodate more than 250 visitors';
 			} else if(this.value < 2){
-				span2.innerHTML = 'Minimum visitors for booking a table is 2';
+				span2.innerHTML = 'Minimum 2 visitors for booking a table';
 			}
 			button.setAttribute('disabled', 'disabled');
 			bool4 = false;
@@ -166,13 +166,13 @@ $(document).ready(function() {
 
 	$('.one').click(function() {
 		$('html').animate({
-			scrollTop: $('section.sct5').offset().top - 97},
+			scrollTop: $('section.sct5').offset().top - 88},
 			1500);
 	});
 
 	$('.two').click(function() {
 		$('html').animate({
-			scrollTop: $('.sct3 .row1').offset().top - 140},
+			scrollTop: $('.sct3 .row1').offset().top - 97},
 			1500);
 	});
 

@@ -43,19 +43,74 @@
 
 }
 @media only screen and (max-width: 1170px){
+
+	nav ul li a:not([class='reserv']) {
+		padding: 35px 6px 20px;
+	}
+	
+	nav ul{
+		left: 150px!important;
+	}
+	nav ul li:last-child a{
+		margin-left: 10px;
+	}
+	nav ul li:last-child{
+		position: fixed;
+		right: 275px!important;
+		top: 57px;
+	}
+	nav li a:not([class='reserv']):hover{
+		padding-left: 6px;
+		padding-right: 6px
+	}
+	/*FIXED---------------------------------------------------------*/
+
+	.sct5>div{
+		width: 80%!important;
+	}
+	.sct5 input, .sct5 select{
+		width: 300px;
+	}
+	.sct5{
+		padding-left: 0!important;
+		padding-right: 0!important;
+		text-align: center;
+	}
+	.sct5 .left{
+		margin-bottom: 90px;
+	}
+	.sct2{
+		text-align: center!important;
+	}
+	.sct1>div{
+		-webkit-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		-o-transform: scale(0.8);
+		transform: scale(0.8);
+		margin-left: -50px;
+	}
+	footer .ff{
+		width: 85%;
+	}
+}
+
+
+
+
+@media only screen and (max-width: 991px){
 	#nav{
-		height: 80px!important;
+		height: 100px!important;
 	}
 	nav ul{
 		width: 300px;
 		left: unset!important;
 		right: -300px	;
-		padding-top: 80px;
-		background: rgba(17,68,62,0.9);
+		padding-top: 120px;
+		background: rgba(17,68,62,0.95);
 		border-bottom-left-radius: 8px;
 	}
 	nav>img{
-		margin-left: 10%!important;
+		margin-left: 40px!important;
 	}
 	nav ul li a:not([class='reserv']) {
 		border: none;
@@ -74,7 +129,7 @@
 	}
 	nav ul li a.reserv{
 		position: fixed;
-		top: 10px!important;
+		top: 20px!important;
 		left: calc(50% - 147px);
 		border: none!important;
 		padding: 10px 15px 5px 60px!important;
@@ -89,36 +144,115 @@
 	.cont{
 		display: inline-block!important;
 		position: fixed;
-		top: 22px;
+		top: 32px;
 		right: 30px;
 	}
-	.sct5>div{
-		width: 80%!important;
+	.sct1 .right{
+		margin-left: -11%!important;
 	}
-	.sct5 input, .sct5 select{
-		width: 300px;
+	.sct1 .left{
+		margin: 0 50px!important;
 	}
-	.sct5{
-		padding-left: 0!important;
-		padding-right: 0!important;
-		text-align: center;
+	footer .sc1{
+		display: none;
 	}
-	.sct5 .left{
-		margin-bottom: 90px;
+	.ff .sc3{
+		float: none;
 	}
-	.sct2{
-		text-align: center!important:;
+	.cntr{
+		width: 70%;
 	}
-	.sct1>div{
-		-webkit-transform: scale(0.8);
-		-ms-transform: scale(0.8);
-		-o-transform: scale(0.8);
-		transform: scale(0.8);
-		margin-left: -50px;
+	.row1 .coll{
+		margin: 0 18px 50px!important;
+		width: 38%!important;
 	}
 }
 
-@media only screen and (max-width: 991px){}
-@media only screen and (max-width: 768px){}
-@media only screen and (max-width: 560px){}
-@media only screen and (max-width: 480px){}
+
+@media only screen and (max-width: 768px){
+	.cntr{
+		width: 80%;
+	}
+	nav>img{
+		display: none;
+	}
+	header nav ul li a.reserv{
+		left: 20px!important;
+	}
+	.one, .two{
+		margin: 15px 20%!important;
+	}
+	.butt{
+		height: unset;
+	}
+	footer .ff{
+		width: 97%;
+	}
+	footer .ff>div{
+		margin-bottom: 55px;
+	}
+	button{
+		padding: 8px 35px!important ;
+	}
+	.sct5 .left img{
+		width: 40%!important;
+		margin: 10px!important;
+	}
+	#sct2{
+		padding: 100px 0!important;
+	}
+	.row1 .coll{
+		margin: 0 10px 50px!important;
+		width: 70%!important;
+	}
+	.header p{
+		font-size: 70px!important;
+	}
+}
+@media only screen and (max-width: 560px){
+	.sct4 {
+		overflow-y: hidden!important;
+	}
+	header p, header p>span{
+		text-align: left;
+	}
+	.sct1#sct1{
+		padding: 0!important;
+	}
+	.sct2 .sct22{
+		width: 100%!important;
+		padding:45px 30px!important;
+	}
+	.sct4 .cntr{
+		width: 100%!important;
+	}
+	.sct5 .right{
+		padding: 10px!important
+	}
+	body .sct1 .right{
+		-webkit-transform: scale(0.6);
+		-ms-transform: scale(0.6);
+		-o-transform: scale(0.6);
+		transform: scale(0.6);
+		margin-left: -13%!important;
+	}
+	body .sct1 .left{
+		margin: 2px -40px!important;
+		padding: 0!important;
+	}
+}
+@media only screen and (max-width: 480px){
+	.header p{
+		font-size: 60px!important;
+	}
+	html body .sct5 .right{
+		padding: 0!important;
+	}
+	.sct5 .form1{
+		margin-left: -6%!important;
+	}
+	img + .text{
+		margin: 30px 1px!important;
+		font-size: 15px;
+	}
+}
