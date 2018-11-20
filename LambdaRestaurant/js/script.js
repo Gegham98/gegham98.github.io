@@ -1,14 +1,96 @@
 $(document).ready(function() {
+	let button = document.querySelector('.sct5 button');
+
+	let bool1 = true;
+	let bool2 = true;
+	let bool3 = true;
+	let bool4 = true;
+
+	// sct5 input name valid
+	let span = document.createElement('span');
+	span.className = 'namealert';
+
+	document.querySelector('#name').onfocusout = function(e){
+		this.parentElement.appendChild(span);
+		if (!this.value.match(/^[A-Za-z]+$/)) {
+			span.innerHTML = 'Please enter alphabet characters only';
+			span.style.display = 'inline-block';
+			button.setAttribute('disabled', 'disabled');
+			bool1 = false;
+		} else{
+			bool1 = true;
+			span.style.display = 'none';
+			if (bool1 && bool2 && bool3 && bool4) {
+				button.removeAttribute('disabled');
+			}
+		}
+	}
+
+	// sct5 input mail valid
 	let at = document.createElement('span');
 	at.className += 'namealert';
+
 	document.getElementById('mail').onfocusout = function(event) {
 		this.parentElement.appendChild(at);
 		if (this.value.indexOf('@') == -1){
 			at.style.display = 'inline-block';
-			at.innerHTML = 'Please enter a valid email address';
+			at.innerHTML = 'Please enter valid email address';
+			button.setAttribute('disabled', 'disabled');
+			bool2 = false;
 		}
 		else{
+			bool2 = true;
 			at.style.display = 'none';
+			if (bool1 && bool2 && bool3 && bool4) {
+				button.removeAttribute('disabled');
+			}
+		}
+	};
+
+	// sct5 input date valid
+	let span1 = document.createElement('span');
+	span1.className = 'namealert';
+
+	document.querySelector('#date').onfocusout = function (e) {
+		this.parentElement.appendChild(span1)
+		let date = new Date();
+		let dateday = this.value[this.value.length-2]+this.value[this.value.length-1];
+		if (dateday < date.getDate()) {
+			span1.style.display = 'inline-block';
+			span1.innerHTML = 'Please enter valid date format';
+			button.setAttribute('disabled', 'disabled');
+			bool3 = false;
+		} else{
+			bool3 = true;
+			span1.style.display = 'none';
+			if (bool1 && bool2 && bool3 && bool4) {
+				button.removeAttribute('disabled');
+			}
+		}
+	}
+
+	// sct5 input number valid
+	let span2 = document.createElement('span');
+	span2.className = 'namealert';
+
+	document.querySelector('#pnum').onfocusout = function(e) {
+		this.parentElement.appendChild(span2);
+		if (this.value<2 || this.value > 250){
+			span2.style.display = 'inline-block';
+			if (this.value > 250) {
+				span2.innerHTML = 'Sorry but we can not accommodate more than 250 visitors';
+			} else if(this.value < 2){
+				span2.innerHTML = 'Minimum visitors for booking a table is 2';
+			}
+			button.setAttribute('disabled', 'disabled');
+			bool4 = false;
+		}
+		else{
+			bool4 = true;
+			span2.style.display = 'none';
+			if (bool1 && bool2 && bool3 && bool4) {
+				button.removeAttribute('disabled');
+			}
 		}
 	};
 
@@ -31,7 +113,7 @@ $(document).ready(function() {
 	}
 
 
-	// from nav>li animated directions to sections
+	//nav>li animate to section
 
 	let liHome = $('nav li:first-child');
 	let liAbout = $('nav li:nth-child(2)');
@@ -94,7 +176,13 @@ $(document).ready(function() {
 			1500);
 	});
 
-	// footer icon sending
+	// burger button
+	$('nav label').click(function my() {
+		this.classList.toggle("change");
+	})
+
+
+	// footer icons
 
 	$('.ico1').click(function(event) {
 		window.open('https://www.facebook.com/');

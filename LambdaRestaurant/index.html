@@ -20,7 +20,13 @@
 			<img src="img/bgtop.png" alt="">
 			<nav id="nav">
 				<img title="Lambda Restaurant" src="img/logotop.png" alt="Lambda">
-				<ul>
+				<input type="checkbox" id="checkit">
+				<label class="cont" for="checkit">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</label>
+				<ul id="sidebarMenu">
 					<li><a>Home</a></li>
 					<li><a>About</a></li>
 					<li><a>Ingredients</a></li>
@@ -190,27 +196,22 @@
 				<div class="form1">
 					<form action="">
 						<div class="inp-div" >
-							<input placeholder="Your name *" id="name" type="text">
+							<input required="" placeholder="Your name *" id="name" type="text">
 							<label for="name">Name</label>
 						</div>
 						<div class="inp-div">
-							<input type="mail" placeholder="Your E-mail *" id="mail">
+							<input required="" type="mail" placeholder="Your E-mail *" id="mail">
 							<label for="mail">E-mail</label>
 						</div>
 						<div class="inp-div">
-							<input type="date" id="date" placeholder="Date *">
+							<input required="" type="date" id="date" placeholder="Date *">
 							<label for="date">Date</label>
 						</div>
 						<div class="inp-div">
-							<select type="text" id="pnum" placeholder="Party number">
-								<option value="">Number 01</option>
-								<option value="">Number 02</option>
-								<option value="">Number 03</option>
-								<option value="">Number 04</option>
-							</select>
+							<input required="" type="number" min="2" max="250" id="pnum" placeholder="Party number">
 							<label for="pnum">Party number</label>
 						</div>
-						<button  type="submit">Book now!</button>
+						<button type="submit">Book now!</button>
 					</form>
 				</div>
 			</div>
