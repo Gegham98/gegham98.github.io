@@ -648,7 +648,6 @@ span.two:hover{margin:0 13px;margin-top: -7px;}
 	padding: 5px 8px;
 	border-radius: 3px;
 	width: 100%;
-	z-index: 1;
 }
 .namealert::before{
 	position: absolute;
