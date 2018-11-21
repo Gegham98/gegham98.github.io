@@ -278,7 +278,7 @@ span.two{
 	border: 3px solid rgba(0,0,0,0.7);
 	color: rgba(0,0,0,0.7);
 }
-span.two:hover{margin:0 13px;margin-top: -7px;}
+span.two:hover{margin:-7px 13px 0}
 
 /*SECTION 1 *******************************************************/
 /*SECTION 1 *******************************************************/

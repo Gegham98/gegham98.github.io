@@ -197,9 +197,8 @@ $(document).ready(function() {
 		window.open('https://twitter.com');
 	});
 
-	// $('.ico1').click(function(event) {
-	// 	console.log(this);
-	// 	window.open('https://www.facebook.com/');
-	// });
+	$('.ico4').click(function(event) {
+		window.open('https://trello.com/');
+	});
 })
 

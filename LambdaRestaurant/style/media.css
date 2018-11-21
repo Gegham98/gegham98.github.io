@@ -182,6 +182,13 @@
 	.one, .two{
 		margin: 15px 20%!important;
 	}
+	.one:hover{
+		margin: 8px 20%!important;
+	}
+
+	.two:hover{
+		margin: 8px 20%!important;
+	}
 	.butt{
 		height: unset;
 	}
