@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 	document.getElementById('mail').onfocusout = function(event) {
 		this.parentElement.appendChild(at);
-		if (this.value.indexOf('@') == -1){
+		if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.value))){
 			at.style.display = 'inline-block';
 			at.innerHTML = 'Please enter valid email address';
 			button.setAttribute('disabled', 'disabled');
